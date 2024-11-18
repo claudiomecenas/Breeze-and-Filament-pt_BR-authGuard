@@ -53,6 +53,7 @@ class AdminPanelProvider extends PanelProvider
             ])
             ->authMiddleware([
                 Authenticate::class,
-            ]);
+            ])
+            ->authGuard('admin'); // incluido para controlar o acesso apenas para admin;
     }
 }
